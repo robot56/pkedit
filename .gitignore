@@ -1,0 +1,17 @@
+# Visual Studio files
+
+obj/
+Properties/
+Scripts/
+bin/
+*.xml
+*.config
+*.user
+
+# Compiled JS files and extra TypeScript files
+/*.js
+*.d.ts
+*.map
+
+# Debug files
+*.bin

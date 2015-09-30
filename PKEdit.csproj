@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{E15809B2-E568-47CD-9268-7A45DB8529B7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="index.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="backend\core\export.ts" />
+    <TypeScriptCompile Include="backend\core\pkx.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\getters.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\load.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\mappings.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\memory\map.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\memory\readwrite.ts" />
+    <TypeScriptCompile Include="backend\core\pkx\ribbons.ts" />
+    <TypeScriptCompile Include="backend\core\policy.ts" />
+    <TypeScriptCompile Include="backend\core\rawdata.ts" />
+    <TypeScriptCompile Include="backend\core\sav.ts" />
+    <TypeScriptCompile Include="backend\core\savedata.ts" />
+    <TypeScriptCompile Include="backend\core\sav\common.ts" />
+    <TypeScriptCompile Include="backend\core\sav\interface.ts" />
+    <TypeScriptCompile Include="backend\core\sav\items.ts" />
+    <TypeScriptCompile Include="backend\core\sav\memory\map.ts" />
+    <TypeScriptCompile Include="backend\core\sav\memory\readwrite.ts" />
+    <TypeScriptCompile Include="backend\core\sav\oras.ts" />
+    <TypeScriptCompile Include="backend\core\sav\xy.ts" />
+    <TypeScriptCompile Include="backend\data\devices.ts" />
+    <TypeScriptCompile Include="backend\data\resourses.ts" />
+    <TypeScriptCompile Include="backend\core\exceptions.ts" />
+    <TypeScriptCompile Include="backend\loader\fileconversion.ts" />
+    <TypeScriptCompile Include="backend\loader\filetypes.ts" />
+    <TypeScriptCompile Include="backend\loader\filetypes\filetypes.ts" />
+    <TypeScriptCompile Include="backend\loader\filetypes\pk6\encryption.ts" />
+    <TypeScriptCompile Include="backend\loader\loader.ts" />
+    <TypeScriptCompile Include="backend\PKEdit.ts" />
+    <TypeScriptCompile Include="backend\utils\debugging.ts" />
+    <TypeScriptCompile Include="backend\utils\devices\frontend.ts" />
+    <TypeScriptCompile Include="backend\utils\numbers.ts" />
+    <TypeScriptCompile Include="backend\utils\strings.ts" />
+    <TypeScriptCompile Include="_references.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\AdditionBoxData-main.sav6.bin" />
+    <None Include="assets\celebi.ek6.bin" />
+    <None Include="assets\main-oras-9_29_2015.sav6.bin" />
+    <None Include="assets\main-test.sav6.bin" />
+    <Content Include="assets\ramsav-edit.bin" />
+    <None Include="assets\ven.pk6.bin" />
+    <None Include="assets\charizard.bin" />
+    <None Include="assets\ven.ek6.bin" />
+    <Content Include="assets\ven232.ek6.bin" />
+    <Content Include="backend\core\pkx\mappings.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backend\tests\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PKEdit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63149</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63149/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>app.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
